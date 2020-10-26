@@ -47,7 +47,7 @@ namespace MathLibrary
             }
         }
 
-        public Vector2 Normalized
+        public Vector3 Normalized
         {
             get
             {
