@@ -35,7 +35,7 @@ namespace MathLibrary
         {
             get
             {
-                
+                return (float)Math.Sqrt((float)(Math.Pow(X,2)) + Math.Pow(Y,2));
             }
         }
 
@@ -68,7 +68,7 @@ namespace MathLibrary
         /// <returns></returns>
         public static Vector2 Normalize(Vector2 vector)
         {
-            
+            return new Vector2((vector.X / vector.Magnitude), (vector.Y / vector.Magnitude));
         }
 
         /// <summary>
@@ -79,7 +79,8 @@ namespace MathLibrary
         /// <returns></returns>
         public static float DotProduct(Vector2 lhs, Vector2 rhs)
         {
-            
+            float scalar = (float)Math.Acos((lhs.X * rhs.X) + (lhs.Y + rhs.Y));
+            return scalar;
         }
 
         public static Vector2 operator +(Vector2 lhs, Vector2 rhs)
@@ -94,7 +95,7 @@ namespace MathLibrary
 
         public static Vector2 operator *(Vector2 lhs, float scalar)
         {
-            
+            return new Vector2(lhs.X * scalar, lhs.Y * scalar);
         }
 
         public static Vector2 operator /(Vector2 lhs, float scalar)
